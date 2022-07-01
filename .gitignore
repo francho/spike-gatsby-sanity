@@ -1,0 +1,31 @@
+# Mac files
+.DS_Store
+
+# Dependency directories
+node_modules
+
+# lerna files
+lerna-debug.log
+yarn-error.log
+
+# config files
+.env.*
+
+# Terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+crash.log
+*.tfvars
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
+# Coverage
+coverage
+junit.xml
+
+.idea
