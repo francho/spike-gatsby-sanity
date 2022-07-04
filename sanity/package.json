@@ -9,7 +9,7 @@
   "scripts": {
     "start": "sanity start",
     "build": "sanity build",
-    "graphql-deploy": "sanity graphql deploy --no-playground"
+    "graphql-deploy": "sanity graphql deploy --no-playground ; sanity-codegen"
   },
   "keywords": [
     "sanity"
@@ -32,6 +32,7 @@
   },
   "devDependencies": {
     "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "sanity-codegen": "^0.9.8"
   }
 }
