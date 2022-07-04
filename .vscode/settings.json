@@ -1,0 +1,22 @@
+{
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": ["javascript"],
+  "eslint.workingDirectories": [
+    {
+      "directory": "sanity",
+      "changeProcessCWD": true
+    },
+    {
+      "directory": "web",
+      "changeProcessCWD": true
+    }
+  ],
+  "cSpell.words": ["fieldsets", "gatsby"],
+  "jest.rootPath": "web",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
