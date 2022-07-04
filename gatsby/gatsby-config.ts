@@ -1,3 +1,14 @@
+/* eslint-disable import/first */
+import dotenv from "dotenv";
+import path from "path";
+
+const configPath = path.resolve(
+  `${__dirname}/../sanity/.env.${process.env.NODE_ENV || "development"}`
+);
+dotenv.config({
+  path: configPath,
+});
+
 import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
@@ -13,8 +24,9 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-source-sanity",
       options: {
-        projectId: "NOT SET",
-        dataset: "NOT SET",
+        projectId: process.env.SANITY_STUDIO_API_PROJECT_ID || "CONFIG_NOT_SET",
+        dataset: process.env.SANITY_STUDIO_API_DATASET || "CONFIG_NOT_SET",
+        token: process.env.SANITY_READ_TOKEN || "CONFIG_NOT_SET",
       },
     },
     "gatsby-plugin-styled-components",
