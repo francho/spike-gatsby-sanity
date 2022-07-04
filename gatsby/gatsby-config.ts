@@ -1,15 +1,13 @@
 /* eslint-disable import/first */
-import dotenv from "dotenv";
-import path from "path";
+import dotenv from 'dotenv'
+import path from 'path'
 
-const configPath = path.resolve(
-  `${__dirname}/../sanity/.env.${process.env.NODE_ENV || "development"}`
-);
+const configPath = path.resolve(`${__dirname}/../sanity/.env.${process.env.NODE_ENV || 'development'}`)
 dotenv.config({
   path: configPath,
-});
+})
 
-import type { GatsbyConfig } from "gatsby";
+import type { GatsbyConfig } from 'gatsby'
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -22,34 +20,34 @@ const config: GatsbyConfig = {
   graphqlTypegen: true,
   plugins: [
     {
-      resolve: "gatsby-source-sanity",
+      resolve: 'gatsby-source-sanity',
       options: {
-        projectId: process.env.SANITY_STUDIO_API_PROJECT_ID || "CONFIG_NOT_SET",
-        dataset: process.env.SANITY_STUDIO_API_DATASET || "CONFIG_NOT_SET",
-        token: process.env.SANITY_READ_TOKEN || "CONFIG_NOT_SET",
+        projectId: process.env.SANITY_STUDIO_API_PROJECT_ID || 'CONFIG_NOT_SET',
+        dataset: process.env.SANITY_STUDIO_API_DATASET || 'CONFIG_NOT_SET',
+        token: process.env.SANITY_READ_TOKEN || 'CONFIG_NOT_SET',
       },
     },
-    "gatsby-plugin-styled-components",
-    "gatsby-plugin-image",
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
+    'gatsby-plugin-styled-components',
+    'gatsby-plugin-image',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sitemap',
     {
-      resolve: "gatsby-plugin-manifest",
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        icon: "src/images/icon.png",
+        icon: 'src/images/icon.png',
       },
     },
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "images",
-        path: "./src/images/",
+        name: 'images',
+        path: './src/images/',
       },
-      __key: "images",
+      __key: 'images',
     },
   ],
-};
+}
 
-export default config;
+export default config
