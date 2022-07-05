@@ -10,12 +10,12 @@
       "changeProcessCWD": true
     },
     {
-      "directory": "web",
+      "directory": "gatsby",
       "changeProcessCWD": true
     }
   ],
   "cSpell.words": ["fieldsets", "gatsby"],
-  "jest.rootPath": "web",
+  "jest.rootPath": "gatsby",
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
