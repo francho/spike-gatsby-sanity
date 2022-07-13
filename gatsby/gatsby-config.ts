@@ -27,7 +27,7 @@ const config: GatsbyConfig = {
         token: process.env.SANITY_READ_TOKEN || 'CONFIG_NOT_SET',
       },
     },
-    'gatsby-plugin-styled-components',
+    'gatsby-plugin-sass',
     'gatsby-plugin-image',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',
