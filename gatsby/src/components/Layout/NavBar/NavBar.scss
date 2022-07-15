@@ -1,0 +1,15 @@
+.navbar {
+  &-logo {
+    display: flex;
+    justify-items: flex-end;
+    &-img {
+      width: 2em;
+      height: 2em;
+      transform: rotate(45deg);
+    }
+    &-text {
+      padding-left: 5px;
+      font-size: 1.2em;
+    }
+  }
+}
