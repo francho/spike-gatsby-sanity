@@ -13,13 +13,15 @@ export interface MoviePreviewProps {
 
 const MoviePreview: React.FC<MoviePreviewProps> = ({ url, poster, title, score }) => {
   return (
-    <div>
-      <Link to={url || '#'}></Link>
-      {poster && <Figure webImage={poster} args={{ width: 200, height: 200 }} />}
-      <h2>
-        {title} ⭐ {score}
-      </h2>
-    </div>
+    <Link to={url || '#'}>
+      <div className="card">
+        <div className="card-image">{poster && <Figure webImage={poster} args={{ width: 1000, height: 200 }} />}</div>
+        <div className="card-content">
+          <p className="title">{title}</p>
+          <p>⭐ {score}</p>
+        </div>
+      </div>
+    </Link>
   )
 }
 
