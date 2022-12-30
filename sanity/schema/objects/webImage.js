@@ -18,9 +18,6 @@ export default {
       type: 'string',
       title: 'Alternative text',
       validation: (Rule) => Rule.required(),
-      options: {
-        isHighlighted: true,
-      },
     },
   ],
   preview: {
